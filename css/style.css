@@ -1,0 +1,250 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+	list-style: none;
+	scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 1% ;
+    background-color: #000;
+}
+.logo{
+    height: 100px;
+    width: 100px;
+    align-self: flex-start;
+}
+li,a{
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffff;
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 1px 5%;
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_links li a {
+    color: #ffff;
+    padding: 0.5rem;
+    width: 20px;
+}
+.nav_links a:hover{
+	background: #B92E0F;
+	color: #000;
+	box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+	border-radius: 4px;
+}
+.deuxieme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.div-image{
+    margin: auto auto;
+    justify-content: center;
+    padding-top: 30px;
+    width: 60%;
+    height: 60%;
+    border-radius: 10px;
+}
+.deuxieme p {
+    color:#867F6F;
+    padding-left:50px ;
+    padding-right:50px ;
+    padding-top: 3%;
+    text-align: center;
+}
+.p1{
+    font-size: large;
+}
+.p2{
+    font-size: small;
+}
+.center-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding:15px;
+}
+.center-img img{
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+	border-radius: 4px;
+    height: 60px;
+    width: 60px;
+    padding: 5px;
+}
+.image{
+    
+    width: 100%;
+    border-radius: 10px;
+}
+.deuxieme input{
+        border: none;
+        width: 200px;
+        margin: 15px;
+        border-radius: 20px;
+        background-color: #D9D9D9;
+}
+.deuxieme .lign{
+    height: 1%;
+    width: 80%;
+    padding: 3px;
+    background-color: #D9D9D9;
+    border-radius: 4px;
+}
+
+.troisieme{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+}
+.troisieme-div{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.troisieme-div input{
+    background-color: #ffff;
+    color:#867F6F ;
+}
+.troisieme img{
+    width: 80%;
+    height: 40%;
+
+}
+.quatrieme{
+    background-color: #000;
+
+}
+.quatrieme input{
+        background-color: #000;
+        color:#867F6F ;
+}
+.cinq{
+    display: flex;
+    flex-direction: column;
+}
+.trouv{
+    display: flex;
+    flex-direction: row;
+}
+#contact{
+   background-color: #000;
+   color:#ffff;
+}
+.send form{
+	max-width: 100%;
+	width: 450px;
+	position: relative;
+}
+.send form input:first-child{
+	display: inline-block;
+	width: 100%;
+	padding: 20px 150px 20px 30px;
+	box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+	outline: none;
+	border: none;
+	border-radius: 15px;
+}
+.send form input:last-child{
+	display: inline-block;
+	position: absolute;
+	outline: none;
+	border: none;
+	padding: 14px 30px;
+	border-radius: 15px;
+	background: #B92E0F;
+	color: #fff;
+	top: 6px;
+	right: 6px;
+	cursor: pointer;
+}
+ul{
+    list-style-type:none;
+}
+.main{
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer{
+	padding: 20px 2px;
+}
+.list{
+	width: 25%;
+    
+}
+.list h4{
+	font-size: 21px;
+	color: #fff;
+	margin-bottom: 30px;
+	position: relative;
+}
+.list h4::before{
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 60px;
+	left: 0;
+	bottom: -10px;
+	background: #fff;
+}
+.list ul li:not(last-child) {
+	margin-bottom: 16px;
+}
+.send .list ul li a{
+	color: #ffffffbf;
+	font-size: 1.1rem;
+	display: block;
+	transition: .3s;
+}
+.list ul li a:hover{
+	color: #fff;
+	transform: translateX(14px);
+}
+.list-div .social a{
+	height: 40px;
+	width: 40px;
+	background: #fff;
+	color: #B92E0F;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 21px;
+	border-radius: 15px;
+	transition: .3s;
+	margin-right: 10px;
+}
+.list-div .social a:hover{
+	transform: scale(1.1);
+}
+
+.end-text{
+	text-align: center;
+	padding-top: 90px;
+}
+.end-text p{
+	color: #fff;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+#send{
+    grid-area: send;
+	color: #fff;
+	background-color: #B92E0F;
+}
+#email{
+    grid-area: email;
+}
