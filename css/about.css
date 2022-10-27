@@ -2,17 +2,25 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
-
 }
 .text-about{
     display: flex;
     flex-direction: column;
-    padding-top: 80px;
+    padding-top: 70px;
     padding-left: 50px;
     padding-right: 90px;
     justify-content: space-around;
     font-size: large;
+    flex-wrap: wrap;
+}
+@media (max-width:740px) {
+    .flex-about{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    }
 }
 .text-about p{
     align-self: center;

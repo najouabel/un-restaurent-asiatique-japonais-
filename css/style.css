@@ -33,6 +33,36 @@ ul {
     margin-left: 50px;
 
 }
+
+.burger-menu-list{
+    /* border: 1px  solid white; */
+    display: none;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    border-radius: 7px;
+    background-color: #28292D;
+    margin-left: 10% ;
+    padding: 2em;
+    transition: 0.3s ease-in-out;
+    
+}
+.burger-menu-list ul{
+    display: block;    
+}
+
+.burger-menu-list ul li {
+    margin: 1em;
+    transition: 0.3s ease-in-out;
+    
+}
+.burger-menu-list ul li:hover {
+    margin: 1em;
+    background-color: red;
+    border-radius: 3px;
+    padding: 5px;
+    
+}
 @media (max-width: 760px){
     header nav{
         display: none;
@@ -269,111 +299,120 @@ nav{
     margin-bottom: 50px;
 }
 #contact{
-   background-color: #000;
-   color:#ffff;
-}
-.send form{
-	max-width: 100%;
-	width: 450px;
-	position: relative;
-}
-.send form input:first-child{
-	display: inline-block;
-	width: 100%;
-	padding: 20px 150px 20px 30px;
-	box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
-	outline: none;
-	border: none;
-	border-radius: 15px;
-}
-.send form input:last-child{
-	display: inline-block;
-	position: absolute;
-	outline: none;
-	border: none;
-	padding: 14px 30px;
-	border-radius: 15px;
-	background: #B92E0F;
-	color: #fff;
-	top: 6px;
-	right: 6px;
-	cursor: pointer;
-}
-ul{
-    list-style-type:none;
-}
-.main{
-	display: flex;
-	flex-wrap: wrap;
-}
-.footer{
-	padding: 20px 2px;
-}
-.list{
-	width: 25%;
-    
-}
-.list h4{
-	font-size: 21px;
-	color: #fff;
-	margin-bottom: 30px;
-	position: relative;
-}
-.list h4::before{
-	content: "";
-	position: absolute;
-	height: 2px;
-	width: 60px;
-	left: 0;
-	bottom: -10px;
-	background: #fff;
-}
-.list ul li:not(last-child) {
-	margin-bottom: 16px;
-}
-.send .list ul li a{
-	color: #ffffffbf;
-	font-size: 1.1rem;
-	display: block;
-	transition: .3s;
-}
-.list ul li a:hover{
-	color: #fff;
-	transform: translateX(14px);
-}
-.list-div .social a{
-	height: 40px;
-	width: 40px;
-	background: #fff;
-	color: #B92E0F;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 21px;
-	border-radius: 15px;
-	transition: .3s;
-	margin-right: 10px;
-}
-.list-div .social a:hover{
-	transform: scale(1.1);
-}
+    background-color: #000;
+    color:#ffff;
+    display: flex;
+    flex-direction: column;
 
-.end-text{
-	text-align: center;
-	padding-top: 90px;
-}
-.end-text p{
-	color: #fff;
-	font-size: 14px;
-	letter-spacing: 2px;
-}
-#send{
-    grid-area: send;
-	color: #fff;
-	background-color: #B92E0F;
-}
-#email{
-    grid-area: email;
-}
+ }
 
-
+ .send form{
+     max-width: 100%;
+     width: 450px;
+     position: relative;
+ }
+ .send form input:first-child{
+     display: inline-block;
+     width: 100%;
+     padding: 20px 150px 20px 30px;
+     box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+     outline: none;
+     border: none;
+     border-radius: 15px;
+ }
+ .send form input:last-child{
+     display: inline-block;
+     position: absolute;
+     outline: none;
+     border: none;
+     padding: 14px 30px;
+     border-radius: 15px;
+     background: #B92E0F;
+     color: #fff;
+     top: 6px;
+     right: 6px;
+     cursor: pointer;
+ }
+ ul{
+     list-style-type:none;
+ }
+ 
+ .footer{
+     padding: 20px 2px;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+ }
+ .list{
+     width: 30%;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+ }
+ .list ul{
+    display: flex;
+    flex-direction: column;
+ }
+ .list h4{
+     font-size: 21px;
+     color: #fff;
+     margin-bottom: 30px;
+     position: relative;
+ }
+ .list h4::before{
+     content: "";
+     position: absolute;
+     height: 2px;
+     width: 60px;
+     left: 0;
+     bottom: -10px;
+     background: #fff;
+ }
+ .list ul li:not(last-child) {
+     margin-bottom: 16px;
+ }
+ .send .list ul li a{
+     color: #ffffffbf;
+     font-size: 1.1rem;
+     display: block;
+     transition: .3s;
+ }
+ .list ul li a:hover{
+     color: #fff;
+     transform: translateX(14px);
+ }
+ .list-div .social a{
+     height: 40px;
+     width: 40px;
+     background: #fff;
+     color: #B92E0F;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 21px;
+     border-radius: 15px;
+     transition: .3s;
+     margin-right: 10px;
+ }
+ .list-div .social a:hover{
+     transform: scale(1.1);
+ }
+ 
+ .end-text{
+     text-align: center;
+     padding-top: 90px;
+ }
+ .end-text p{
+     color: #fff;
+     font-size: 14px;
+     letter-spacing: 2px;
+ }
+ #send{
+     grid-area: send;
+     color: #fff;
+     background-color: #B92E0F;
+ }
+ #email{
+     grid-area: email;
+ }
+ 
