@@ -5,7 +5,7 @@
 
 .div-right{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: space-between;
 }
 .divcard{

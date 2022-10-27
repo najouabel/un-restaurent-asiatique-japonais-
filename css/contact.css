@@ -42,9 +42,7 @@ textarea{
     background-color: #B92E0F;
     cursor: pointer;
     color: white;
-    transition: 0.2s ease-in-out;
-    
-    
+    transition: 0.2s ease-in-out; 
 }
 .form-tr{
     padding-top:60px ;
@@ -52,9 +50,7 @@ textarea{
 .submit-message:hover{
     background-color: #B92E0F;
     transform: scale(1.01);
-
 }
-
 .from-Names{
     display: flex;
     justify-content: center;
@@ -63,7 +59,6 @@ textarea{
 .divider{
     height: 80px;
 }
-
 @media (max-width:740px) {
     .form-tr input{
         margin: 10px 0;

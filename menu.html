@@ -28,16 +28,54 @@
         <div class="div-right">
             <div class="div-menu">	
 			<label for="menu">Menu:</label>
-			<select name="menu" id="menu">
-			<option value="SOUPES">SOUPES</option>
-			<option value="SUSHI & CO">SUSHI & CO</option>
-			<option value="YAKITORIS">YAKITORIS</option>
-			<option value="SALADES">SALADES</option>
+			<select name="menu" id="menu" onchange="getSelectValue();">
+				<option value="SOUPES">SOUPES</option>
+				<option value="SUSHI & CO">SUSHI & CO</option>
+				<option value="YAKITORIS">YAKITORIS</option>
+				<option value="SALADES">SALADES</option>
 			</select>
 			</div>
 		
-			<h5>SOUPES</h5>
-			<div class="div-choix">
+			
+			<div class="div-choix" id="SOUPES">
+				<h5>SOUPES</h5>
+                <div class="div-card" >
+					<img src="img/salad1.png" alt="soupe">
+					<div class="divcard">
+					<div class="div-card-card">
+					<h6>SOUPE POULET</h6>
+					<h6>36 Dhs</h6>
+			        </div>
+					<button type="button">+</button>
+				</div>
+					
+				</div>
+				<div class="div-card">
+					<img src="img/salad1.png" alt="soupe">
+					<div class="divcard">
+					<div class="div-card-card">
+					<h6>SOUPE POULET</h6>
+					<h6>36 Dhs</h6>
+			        </div>
+					<button type="button">+</button>
+				</div>
+					
+				</div>
+				<div class="div-card">
+					<img src="img/salad1.png" alt="soupe">
+					<div class="divcard">
+					<div class="div-card-card">
+					<h6>SOUPE POULET</h6>
+					<h6>36 Dhs</h6>
+			        </div>
+					<button type="button">+</button>
+				</div>
+					
+				</div>
+			</div>
+			
+			<div class="div-choix" id="SUSHI & CO">
+				<h5>SUSHI & CO</h5>
                 <div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
@@ -72,8 +110,9 @@
 					
 				</div>
 			</div>
-			<h5>SUSHI & CO</h5>
-			<div class="div-choix">
+           
+			<div class="div-choix" id="YAKITORIS">
+				<h5>YAKITORIS</h5>
                 <div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
@@ -108,8 +147,9 @@
 					
 				</div>
 			</div>
-            <h5>YAKITORIS</h5>
-			<div class="div-choix">
+			
+			<div class="div-choix" id="SALADES">
+				<h5>SALADES</h5>
                 <div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
@@ -117,7 +157,18 @@
 					<h6>SOUPE POULET</h6>
 					<h6>36 Dhs</h6>
 			        </div>
-					<button type="button">+</button>
+					<button type="button" onclick="clickme(36 ,'SOUPE POULET')" id="clickmee">+</button>
+				</div>
+					
+				</div>
+				<div class="div-card plat-1">
+					<img src="img/salad1.png" alt="soupe">
+					<div class="divcard">
+					<div class="div-card-card">
+					<h6 class="plat-name">SOUPE Draa</h6>
+					<h6><span class="plat-prix">20</span> Dhs</h6>
+			        </div>
+					<button class="plat-btn" type="button" >+</button>
 				</div>
 					
 				</div>
@@ -125,65 +176,21 @@
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
 					<div class="div-card-card">
-					<h6>SOUPE POULET</h6>
-					<h6>36 Dhs</h6>
-			        </div>
-					<button type="button">+</button>
-				</div>
-					
-				</div>
-				<div class="div-card">
-					<img src="img/salad1.png" alt="soupe">
-					<div class="divcard">
-					<div class="div-card-card">
-					<h6>SOUPE POULET</h6>
-					<h6>36 Dhs</h6>
-			        </div>
-					<button type="button">+</button>
-				</div>
-					
-				</div>
-			</div>
-			<h5>SALADES</h5>
-			<div class="div-choix">
-                <div class="div-card">
-					<img src="img/salad1.png" alt="soupe">
-					<div class="divcard">
-					<div class="div-card-card">
-					<h6>SOUPE POULET</h6>
-					<h6>36 Dhs</h6>
-			        </div>
-					<button type="button">+</button>
-				</div>
-					
-				</div>
-				<div class="div-card">
-					<img src="img/salad1.png" alt="soupe">
-					<div class="divcard">
-					<div class="div-card-card">
-					<h6>SOUPE POULET</h6>
-					<h6>36 Dhs</h6>
-			        </div>
-					<button type="button">+</button>
-				</div>
-					
-				</div>
-				<div class="div-card">
-					<img src="img/salad1.png" alt="soupe">
-					<div class="divcard">
-					<div class="div-card-card">
-					<h6>SOUPE POULET</h6>
-					<h6>36 Dhs</h6>
-			        </div>
-					<button type="button">+</button>
+						<h6 class="plat-name">Draa Draa</h6>
+						<h6><span class="plat-prix">20</span> Dhs</h6>
+						</div>
+						<button class="plat-btn" type="button" >+</button>
 				</div>
 					
 				</div>
 			</div>
 	    </div>
-		<div class="div-left">
+		<div class="div-left" >
 			<h4>Votre commande</h4>
 		     <h2></h2>
+			 <div class="livreur">
+
+			 </div>
 			<button type="button">valider</button>
 		</div>
 	</div>
@@ -237,5 +244,6 @@
 			<p>© 2022 Made in City . All rights reserved</p>
 		</div>
 	</section>
+	<script src="js/menu.js"></script>
 </body>
 </html>
