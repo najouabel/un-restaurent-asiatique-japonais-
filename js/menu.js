@@ -38,20 +38,85 @@ categorySect.addEventListener("change",()=>{
 
 
 });
+let cartItems = document.querySelector(".cart-items");
+document.querySelectorAll(".plat-btn").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    let plat = e.target.parentElement.parentElement;
+    let platName = plat.querySelector(".plat-name").textContent;
+    let platPrix = plat.querySelector(".plat-prix").textContent;
+    let tmp = 1;
+    let = document.querySelector(".total");
+    let totalPrix = parseInt(total.textContent);
+    totalPrix += parseInt(platPrix);
+    total.textContent = totalPrix;
 
-var livreur = document.querySelector(".livreur");
-var platName = document.querySelector(".plat-name");
-var platPrix = document.querySelector(".plat-prix");
-var platBtn = document.querySelectorAll(".plat-btn");
-var tmp=1;
-var p ;
-platBtn.forEach(btn => {
-    btn.onclick = () => {
-        livreur.innerHTML = `<p> ${tmp}  - ${platName.innerText}   -  ${tmp*platPrix.innerText} Dhs </p>`;
-        tmp+=1;
-       /* livreur.ELEMENT_NODE.forEach(elmenet =>{
-            p += elmenet;
-        });
-        console.log(p);*/
-    };
+    let cartItem = document.createElement("div");
+    cartItem.classList.add("cart-item");
+    cartItem.innerHTML = `
+    <div class="cart-item">
+      <div class="cart-item-name">
+        <p>NOM de PLAT : ${platName}</p>
+      </div>
+      <div class="cart-item-prix">
+        <p>PRIX : ${platPrix}</p>
+      </div>
+      <div class="cart-item-quantite">
+        <p>QUANTITE : ${tmp}</p>
+      </div>
+    
+      <div class="cart-item-btn">
+        <button class="cart-item-btn-add">+</button>
+        <button class="cart-item-btn-remove">-</button>
+      </div>
+      <div class="cart-item-clear">
+        <button class="cart-item-clear-btn">CLEAR</button>
+      </div>
+    </div>
+  `;
+
+    cartItems.appendChild(cartItem);
+
+       cartItem
+      .querySelector(".cart-item-btn-add")
+      .addEventListener("click", () => {
+        tmp++;
+        cartItem.querySelector(".cart-item-quantite").innerHTML = `
+      <p>QUANTITE : ${tmp}</p>
+    `;
+
+        let = document.querySelector(".total");
+        let totalPrix = parseInt(total.textContent);
+        totalPrix += parseInt(platPrix);
+        total.textContent = totalPrix;
+      });
+
+    cartItem
+      .querySelector(".cart-item-btn-remove")
+      .addEventListener("click", () => {
+        tmp--;
+        cartItem.querySelector(".cart-item-quantite").innerHTML = `
+      <p>
+      
+      </p>QUANTITE : ${tmp}</p>
+        
+    `;
+        if (tmp == 0) {
+          cartItem.remove();
+        }
+        let = document.querySelector(".total");
+        let totalPrix = parseInt(total.textContent);
+        totalPrix -= parseInt(platPrix);
+        total.textContent = totalPrix;
+      });
+
+    cartItem
+      .querySelector(".cart-item-clear-btn")
+      .addEventListener("click", () => {
+        cartItem.remove();
+        let = document.querySelector(".total");
+        let totalPrix = parseInt(total.textContent);
+        totalPrix -= parseInt(platPrix) * tmp;
+        total.textContent = totalPrix;
+      });
+  });
 });
