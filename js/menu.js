@@ -38,18 +38,20 @@ categorySect.addEventListener("change",()=>{
 
 
 });
-let cartItems = document.querySelector(".cart-items");
-document.querySelectorAll(".plat-btn").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    let plat = e.target.parentElement.parentElement;
-    let platName = plat.querySelector(".plat-name").textContent;
-    let platPrix = plat.querySelector(".plat-prix").textContent;
-    let tmp = 1;
-    let = document.querySelector(".total");
-    let totalPrix = parseInt(total.textContent);
-    totalPrix += parseInt(platPrix);
-    total.textContent = totalPrix;
 
+let cartItems = document.querySelector(".cart-items");
+var platName = document.querySelector(".plat-name");
+var platPrix = document.querySelector(".plat-prix");
+var platBtn = document.querySelectorAll(".plat-btn");
+var tmp=1;
+
+document.querySelectorAll(".plat-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      let plat = e.target.parentElement.parentElement;
+      let platName = plat.querySelector(".plat-name").textContent;
+      let platPrix = plat.querySelector(".plat-prix").textContent;
+      let tmp = 1;
+      
     let cartItem = document.createElement("div");
     cartItem.classList.add("cart-item");
     cartItem.innerHTML = `
@@ -68,55 +70,22 @@ document.querySelectorAll(".plat-btn").forEach((btn) => {
         <button class="cart-item-btn-add">+</button>
         <button class="cart-item-btn-remove">-</button>
       </div>
-      <div class="cart-item-clear">
-        <button class="cart-item-clear-btn">CLEAR</button>
-      </div>
     </div>
   `;
+        cartItems.appendChild(cartItem);
 
-    cartItems.appendChild(cartItem);
-
-       cartItem
-      .querySelector(".cart-item-btn-add")
-      .addEventListener("click", () => {
+        cartItem
+        .querySelector(".cart-item-btn-add")
+        .addEventListener("click", () => {
         tmp++;
         cartItem.querySelector(".cart-item-quantite").innerHTML = `
-      <p>QUANTITE : ${tmp}</p>
-    `;
-
-        let = document.querySelector(".total");
+        <p>QUANTITE : ${tmp}</p>
+        `;
+        let total= document.querySelector(".cart-item-prix");
         let totalPrix = parseInt(total.textContent);
         totalPrix += parseInt(platPrix);
         total.textContent = totalPrix;
       });
 
-    cartItem
-      .querySelector(".cart-item-btn-remove")
-      .addEventListener("click", () => {
-        tmp--;
-        cartItem.querySelector(".cart-item-quantite").innerHTML = `
-      <p>
-      
-      </p>QUANTITE : ${tmp}</p>
-        
-    `;
-        if (tmp == 0) {
-          cartItem.remove();
-        }
-        let = document.querySelector(".total");
-        let totalPrix = parseInt(total.textContent);
-        totalPrix -= parseInt(platPrix);
-        total.textContent = totalPrix;
-      });
-
-    cartItem
-      .querySelector(".cart-item-clear-btn")
-      .addEventListener("click", () => {
-        cartItem.remove();
-        let = document.querySelector(".total");
-        let totalPrix = parseInt(total.textContent);
-        totalPrix -= parseInt(platPrix) * tmp;
-        total.textContent = totalPrix;
-      });
-  });
+    });
 });
