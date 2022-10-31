@@ -86,6 +86,22 @@ document.querySelectorAll(".plat-btn").forEach((btn) => {
         totalPrix += parseInt(platPrix);
         total.textContent = totalPrix;
       });
-
+      cartItem
+      .querySelector(".cart-item-btn-remove")
+      .addEventListener("click", () => {
+        tmp--;
+        cartItem.querySelector(".cart-item-quantite").innerHTML = `
+      
+      </p>QUANTITE : ${tmp}</p>
+        
+    `;
+        if (tmp == 0) {
+          cartItem.remove();
+        }
+        let total = document.querySelector(".cart-item-prix");
+        let totalPrix = parseInt(total.textContent);
+        totalPrix -= parseInt(platPrix);
+        total.textContent = totalPrix;
+      });
     });
 });
