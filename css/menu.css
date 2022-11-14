@@ -62,24 +62,50 @@
 .div-left{
         padding-top:10px;
         width: 70%;
-        height: 20%;
         padding-bottom: 10px;
         margin: auto auto;
         display: grid;
         border-radius: 7px;
-        overflow-y: scroll;
         border: none;
         box-shadow: 2px 5px 29px -9px rgba(0,0,0,0.8);
         -webkit-box-shadow: 2px 5px 29px -9px rgba(0,0,0,0.8);
         -moz-box-shadow: 2px 5px 29px -9px rgba(0,0,0,0.8);
         justify-content: space-around;
 }
+
+.left-card-title{
+    margin-bottom: 16px;
+}
+
+.total{
+    margin: 16px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-items .cart-item{
+    margin: 17px 0;
+}
+
+
+
 .div-left button{
     background-color: rgb(57, 55, 55);
     color: #fff;
     border-radius: 7px;
-    width: 90%;
+    width: 100%;
     height: auto;
+}
+
+button.valider{
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    background-color: black;
+}
+
+button.valider:hover{
+    background-color: #242222;
 }
 .div-left h2{
     height: 70px;
@@ -95,4 +121,4 @@
     justify-content: space-around;
     
 }
-.div-menu 
+
