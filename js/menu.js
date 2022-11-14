@@ -44,64 +44,109 @@ var platName = document.querySelector(".plat-name");
 var platPrix = document.querySelector(".plat-prix");
 var platBtn = document.querySelectorAll(".plat-btn");
 var tmp=1;
+let totaltotal = document.querySelector(".totaltotal");
+var total=0;
 
-document.querySelectorAll(".plat-btn").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      let plat = e.target.parentElement.parentElement;
-      let platName = plat.querySelector(".plat-name").textContent;
-      let platPrix = plat.querySelector(".plat-prix").textContent;
-      let tmp = 1;
-      
-    let cartItem = document.createElement("div");
-    cartItem.classList.add("cart-item");
-    cartItem.innerHTML = `
-    <div class="cart-item">
-      <div class="cart-item-name">
-        <p>NOM de PLAT : ${platName}</p>
-      </div>
-      <div class="cart-item-prix">
-        <p>PRIX : ${platPrix}</p>
-      </div>
-      <div class="cart-item-quantite">
-        <p>QUANTITE : ${tmp}</p>
-      </div>
+let items = [];
+
+function itemExist(id){
+  for (let i = 0; i < items.length; i++) {
+    if(items[i].id == id) return true;
+  }
+
+  return false;
+}
+
+function calculateTotal(){
+  let total = 0;
+  items.forEach(function(item){
+    total = total + parseInt(item.prix)
+  })
+
+  return total;
+}
+function increeseQte(id){
+  items.forEach(function(item){
+    if(item.id==id){
+      item.qte++;
+      item.prix= item.initPrix*item.qte;
+    }
+  })
+}
+
+function decreeseQte(id){
+  items.forEach(function(item,i){
+    if(item.id==id){
+      item.qte--;
+      item.prix= item.initPrix*item.qte;
+      if(item.qte == 0){
+        items.splice(i,1);
+      }
+    }
+  })
+}
+
+function updateCard(){
+ 
+  totaltotal.textContent = calculateTotal();
+
+  let itemsOutput = ``;
+  
+    items.forEach(item => {
+      itemsOutput+= `
+      <div class="cart-item">
+        <div class="cart-item-name">
+          <p>NOM de PLAT : ${item.name}</p>
+        </div>
+        <div class="cart-item-prix">
+          <p>PRIX : ${item.prix}</p>
+        </div>
+        <div class="cart-item-quantite">
+          <p>QUANTITE : ${item.qte}</p>
+        </div>
     
-      <div class="cart-item-btn">
-        <button class="cart-item-btn-add">+</button>
-        <button class="cart-item-btn-remove">-</button>
+        <div class="cart-item-btn">
+          <button class="cart-item-btn-add" data-id="${item.id}">+</button>
+          <button class="cart-item-btn-remove" data-id="${item.id}">-</button>
+        </div>
       </div>
-    </div>
-  `;
-        cartItems.appendChild(cartItem);
+      `         
+    });
 
-        cartItem
-        .querySelector(".cart-item-btn-add")
-        .addEventListener("click", () => {
-        tmp++;
-        cartItem.querySelector(".cart-item-quantite").innerHTML = `
-        <p>QUANTITE : ${tmp}</p>
-        `;
-        let total= document.querySelector(".cart-item-prix");
-        let totalPrix = parseInt(total.textContent);
-        totalPrix += parseInt(platPrix);
-        total.textContent = totalPrix;
-      });
-      cartItem
-      .querySelector(".cart-item-btn-remove")
-      .addEventListener("click", () => {
-        tmp--;
-        cartItem.querySelector(".cart-item-quantite").innerHTML = `
-      
-      </p>QUANTITE : ${tmp}</p>
-        
-    `;
-        if (tmp == 0) {
-          cartItem.remove();
-        }
-        let total = document.querySelector(".cart-item-prix");
-        let totalPrix = parseInt(total.textContent);
-        totalPrix -= parseInt(platPrix);
-        total.textContent = totalPrix;
+    cartItems.innerHTML = itemsOutput;
+   
+    document.querySelectorAll('.cart-item-btn-add').forEach(addBtn=>{
+      addBtn.addEventListener('click',(e)=>{
+        increeseQte(addBtn.dataset.id);
+        updateCard();
       });
     });
+
+    document.querySelectorAll('.cart-item-btn-remove').forEach(removeBtn=>{
+      removeBtn.addEventListener('click',(e)=>{
+        decreeseQte(removeBtn.dataset.id);
+        updateCard();
+      });
+    });
+}
+
+document.querySelectorAll('.plat-btn').forEach(btn=>{
+  btn.addEventListener('click',(e)=>{
+
+    if(!itemExist(btn.dataset.id)){
+      let newItem = {
+        id: btn.dataset.id,
+        name: btn.dataset.name,
+        prix: btn.dataset.prix,
+        initPrix: btn.dataset.prix,
+        qte: 1
+      };
+
+      items.push(newItem);
+    }else{
+      increeseQte(btn.dataset.id);
+    }
+
+    updateCard();
+  });
 });

@@ -67,6 +67,7 @@
         margin: auto auto;
         display: grid;
         border-radius: 7px;
+        overflow-y: scroll;
         border: none;
         box-shadow: 2px 5px 29px -9px rgba(0,0,0,0.8);
         -webkit-box-shadow: 2px 5px 29px -9px rgba(0,0,0,0.8);

@@ -1,205 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="japonaise">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="japonaise">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <title>japonaise food</title>
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	<title>japonaise food</title>
 </head>
+
 <body>
-    <header>
-        <img  class="logo" src="img/we.png" alt="logo">
-        <nav>
-            <ul class="nav_links">
-                <li><a href="index.html"> Acceuil</a></li>
-                <li><a href="menu.html"> Menu</a></li>
-                <li><a href="about.html"> About</a></li>
-                <li><a href="contact.html"> Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+	<header>
+		<img class="logo" src="img/we.png" alt="logo">
+		<nav>
+			<ul class="nav_links">
+				<li><a href="index.html"> Acceuil</a></li>
+				<li><a href="menu.html"> Menu</a></li>
+				<li><a href="about.html"> About</a></li>
+				<li><a href="contact.html"> Contact</a></li>
+			</ul>
+		</nav>
+	</header>
 	<div class="divider">
 	</div>
 	<div class="div-tout-right-left">
-        <div class="div-right">
-            <div class="div-menu">	
-			<label for="menu">Menu:</label>
-			<select name="menu" id="menu" onchange="getSelectValue();">
-				<option value="SOUPES">SOUPES</option>
-				<option value="SUSHI & CO">SUSHI & CO</option>
-				<option value="YAKITORIS">YAKITORIS</option>
-				<option value="SALADES">SALADES</option>
-			</select>
+		<div class="div-right">
+			<div class="div-menu">
+				<label for="menu">Menu:</label>
+				<select name="menu" id="menu" onchange="getSelectValue();">
+					<option value="SOUPES">SOUPES</option>
+					<option value="SUSHI & CO">SUSHI & CO</option>
+					<option value="YAKITORIS">YAKITORIS</option>
+					<option value="SALADES">SALADES</option>
+				</select>
 			</div>
-		
-			
+
+
 			<div class="div-choix" id="SOUPES">
 				<h5>SOUPES</h5>
-                <div class="div-card">
+				<div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
-					<div class="div-card-card">
-						<h6 class="plat-name">Draa Draa</h6>
-						<h6><span class="plat-prix">20</span> Dhs</h6>
+						<div class="div-card-card">
+							<h6 class="plat-name">SOUPES1</h6>
+							<h6><span class="plat-prix">20</span> Dhs</h6>
 						</div>
-						<button class="plat-btn" type="button" >+</button>
-				</div>
-					
+						<button class="plat-btn" type="button" data-name="SOUPES1" data-prix="44" data-id="1">+</button>
+					</div>
+
 				</div>
 				<div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
-					<div class="div-card-card">
-						<h6 class="plat-name">Draa Draa</h6>
-						<h6><span class="plat-prix">20</span> Dhs</h6>
+						<div class="div-card-card">
+							<h6 class="plat-name">SOUPES2</h6>
+							<h6><span class="plat-prix">20</span> Dhs</h6>
 						</div>
-						<button class="plat-btn" type="button" >+</button>
-				</div>
-					
+						<button class="plat-btn" type="button" data-name="SOUPES2" data-prix="33" data-id="2">+</button>
+					</div>
+
 				</div>
 				<div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
-					<div class="div-card-card">
-						<h6 class="plat-name">Draa Draa</h6>
-						<h6><span class="plat-prix">20</span> Dhs</h6>
+						<div class="div-card-card">
+							<h6 class="plat-name">SOUPES3</h6>
+							<h6><span class="plat-prix">20</span> Dhs</h6>
 						</div>
-						<button class="plat-btn" type="button" >+</button>
-				</div>
-					
+						<button class="plat-btn" type="button" data-name="SOUPES3" data-prix="94" data-id="3">+</button>
+					</div>
+
 				</div>
 			</div>
-			
+
 			<div class="div-choix" id="SUSHI & CO">
 				<h5>SUSHI & CO</h5>
-                <div class="div-card">
+				<div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
-					<div class="div-card-card">
-						<h6 class="plat-name">Draa Draa</h6>
-						<h6><span class="plat-prix">20</span> Dhs</h6>
+						<div class="div-card-card">
+							<h6 class="plat-name">SUSHI & CO1</h6>
+							<h6><span class="plat-prix">20</span> Dhs</h6>
 						</div>
-						<button class="plat-btn" type="button" >+</button>
-				</div>
-					
+						<button class="plat-btn" type="button" data-name="SUSHI & CO1" data-prix="414"
+							data-id="4">+</button>
+					</div>
+
 				</div>
 				<div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
-					<div class="div-card-card">
-						<h6 class="plat-name">Draa Draa</h6>
-						<h6><span class="plat-prix">20</span> Dhs</h6>
+						<div class="div-card-card">
+							<h6 class="plat-name">SUSHI & CO2</h6>
+							<h6><span class="plat-prix">20</span> Dhs</h6>
 						</div>
-						<button class="plat-btn" type="button" >+</button>
-				</div>
-					
+						<button class="plat-btn" type="button" data-name="SUSHI & CO2" data-prix="84"
+							data-id="5">+</button>
+					</div>
+
 				</div>
 				<div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
-					<div class="div-card-card">
-						<h6 class="plat-name">Draa Draa</h6>
-						<h6><span class="plat-prix">20</span> Dhs</h6>
+						<div class="div-card-card">
+							<h6 class="plat-name">SUSHI & CO3</h6>
+							<h6><span class="plat-prix">20</span> Dhs</h6>
 						</div>
-						<button class="plat-btn" type="button" >+</button>
-				</div>
-					
+						<button class="plat-btn" type="button" data-name="SUSHI & CO3" data-prix="24"
+							data-id="6">+</button>
+					</div>
+
 				</div>
 			</div>
-           
+
 			<div class="div-choix" id="YAKITORIS">
 				<h5>YAKITORIS</h5>
-                <div class="div-card">
+				<div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
-					<div class="div-card-card">
-						<h6 class="plat-name">Draa Draa</h6>
-						<h6><span class="plat-prix">20</span> Dhs</h6>
+						<div class="div-card-card">
+							<h6 class="plat-name">YAKITORIS1</h6>
+							<h6><span class="plat-prix">20</span> Dhs</h6>
 						</div>
-						<button class="plat-btn" type="button" >+</button>
-				</div>
-					
+						<button class="plat-btn" type="button" data-name="YAKITORIS1" data-prix="14"
+							data-id="7">+</button>
+					</div>
+
 				</div>
 				<div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
-					<div class="div-card-card">
-						<h6 class="plat-name">Draa Draa</h6>
-						<h6><span class="plat-prix">20</span> Dhs</h6>
+						<div class="div-card-card">
+							<h6 class="plat-name">YAKITORIS2</h6>
+							<h6><span class="plat-prix">20</span> Dhs</h6>
 						</div>
-						<button class="plat-btn" type="button" >+</button>
-				</div>
-					
+						<button class="plat-btn" type="button" data-name="YAKITORIS2" data-prix="44"
+							data-id="8">+</button>
+					</div>
+
 				</div>
 				<div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
-					<div class="div-card-card">
-						<h6 class="plat-name">Draa Draa</h6>
-						<h6><span class="plat-prix">20</span> Dhs</h6>
+						<div class="div-card-card">
+							<h6 class="plat-name">YAKITORIS3</h6>
+							<h6><span class="plat-prix">20</span> Dhs</h6>
 						</div>
-						<button class="plat-btn" type="button" >+</button>
-				</div>
-					
+						<button class="plat-btn" type="button" data-name="YAKITORIS3" data-prix="44"
+							data-id="9">+</button>
+					</div>
+
 				</div>
 			</div>
-			
+
 			<div class="div-choix" id="SALADES">
 				<h5>SALADES</h5>
-                <div class="div-card">
+				<div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
-					<div class="div-card-card">
-						<h6 class="plat-name">Draa Draa</h6>
-						<h6><span class="plat-prix">20</span> Dhs</h6>
+						<div class="div-card-card">
+							<h6 class="plat-name">SALADES1</h6>
+							<h6><span class="plat-prix">20</span> Dhs</h6>
 						</div>
-						<button class="plat-btn" type="button" >+</button>
-				</div>
-					
+						<button class="plat-btn" type="button" data-name="SALADES1" data-prix="94"
+							data-id="10">+</button>
+					</div>
+
 				</div>
 				<div class="div-card plat-1">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
-					<div class="div-card-card">
-					<h6 class="plat-name">SOUPE Draa</h6>
-					<h6><span class="plat-prix">20</span> Dhs</h6>
-			        </div>
-					<button class="plat-btn" type="button" >+</button>
-				</div>
-					
+						<div class="div-card-card">
+							<h6 class="plat-name">SOUPE 2</h6>
+							<h6><span class="plat-prix">20</span> Dhs</h6>
+						</div>
+						<button class="plat-btn" type="button" data-name="SALADES2" data-prix="34"
+							data-id="11">+</button>
+					</div>
+
 				</div>
 				<div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
-					<div class="div-card-card">
-						<h6 class="plat-name">Draa Draa</h6>
-						<h6><span class="plat-prix">20</span> Dhs</h6>
+						<div class="div-card-card">
+							<h6 class="plat-name">SALADES2</h6>
+							<h6><span class="plat-prix">20</span> Dhs</h6>
 						</div>
-						<button class="plat-btn" type="button" >+</button>
-				</div>
-					
+						<button class="plat-btn" type="button" data-name="SALADES3" data-prix="14"
+							data-id="12">+</button>
+					</div>
+
 				</div>
 			</div>
-	    </div>
-		<div class="div-left" >
-			<h4>Votre commande</h4>
-		     <h2></h2>
-			 <div class="cart-items">
+		</div>
+		<div class="div-left">
+			<h4 class="left-card-title">Votre commande</h4>
+			<div class="cart-items">
 
-			 </div>
-			<button type="button">valider</button>
+			</div>
+			<div class="total">
+               <h3>total:</h3>
+			   <div class="totaltotal"></div>
+			</div>
+			<button class="valider" type="button">valider</button>
 		</div>
 	</div>
-    <div class="divider">
+	<div class="divider">
 	</div>
 
-    <section id="contact">
-        <div class="main">
-		    <div class="footer">
+	<section id="contact">
+		<div class="main">
+			<div class="footer">
 				<div class="list">
 					<h4>À propos</h4>
 					<ul>
@@ -218,32 +232,33 @@
 						<li><a href="#">Activités</a></li>
 					</ul>
 				</div>
-                <div class="list">
-				    <div class="list-div">
-					    <h4>Nos plus belles stories.Toutes les semaines.</h4>
-					    <div class="send">
-                            <form>
-                            <input type="email" placeholder="Write Your Email" required>
-                            <input type="submit" value="Submit">
-                            </form>
-                        </div>
-				    </div>
+				<div class="list">
+					<div class="list-div">
+						<h4>Nos plus belles stories.Toutes les semaines.</h4>
+						<div class="send">
+							<form>
+								<input type="email" placeholder="Write Your Email" required>
+								<input type="submit" value="Submit">
+							</form>
+						</div>
+					</div>
 
-				    <div class="list-div">
-					    <h4>Suivez-nous</h4>
-					    <div class="social">
-					    	<a href="#"><i class='bx bxl-facebook' ></i></a>
-					    	<a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+					<div class="list-div">
+						<h4>Suivez-nous</h4>
+						<div class="social">
+							<a href="#"><i class='bx bxl-facebook'></i></a>
+							<a href="#"><i class='bx bxl-instagram-alt'></i></a>
+						</div>
 					</div>
 				</div>
-            </div>
-        </div>
-        <div class="main">
-		<div class="end-text">
-			<p>© 2022 Made in City . All rights reserved</p>
-		</div>
-    </div>
+			</div>
+			<div class="main">
+				<div class="end-text">
+					<p>© 2022 Made in City . All rights reserved</p>
+				</div>
+			</div>
 	</section>
 	<script src="js/menu.js"></script>
 </body>
+
 </html>
