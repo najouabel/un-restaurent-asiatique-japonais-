@@ -7,14 +7,38 @@
 	list-style: none;
 	scroll-behavior: smooth;
 }
-
+nav .menu-hamburger{
+    display: none;
+}
 @media (max-width: 760px){
-    header nav{
-        display: none;
+    nav .menu-hamburger{
+        display: block;
+        width: 30px;
     }
 
+    .nav_links {
+        position:fixed;
+        right: 0;
+        top: 12vh;
+        height: 27vh;
+        width: 27vh;
+        display: none;
+        padding: 15px;
+        justify-content:space-between;
+        flex-direction: column;
+        background-color: #000;
+    }
+    .mobile-menu {
+        display: flex;
+    }
+    .nav_links ul{
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
 header{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -217,7 +241,7 @@ nav{
 }
 
 .img-trouv{
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 .trouv{
