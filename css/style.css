@@ -318,9 +318,7 @@ nav{
     width: 50%;
     cursor: pointer;
  }
- .send{
-    width: 350px;
-}
+ 
  .footer{
      padding: 20px 2px;
      display: flex;
