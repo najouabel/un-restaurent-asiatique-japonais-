@@ -7,31 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>japonaise food</title>
 </head>
 <body>
-    <div class="nav">
+    <div class="nav ">
         <header>
             <img  class="logo" src="img/we.png" alt="logo">
+            <div class="bx bx-menu" id="menu-icon"></div>
             <nav>
-                <ul class="nav_links">
-                    <li><a href="index.html"> Acceuil</a></li>
-                    <li><a href="menu.html"> Menu</a></li>
-                    <li><a href="about.html"> About</a></li>
-                    <li><a href="contact.html"> Contact</a></li>
+                
+
+                <ul class="nav_links ">
+                    <li class="nav-item"><a href="index.html" class="nav_link" > Acceuil</a></li>
+                    <li class="nav-item"><a href="menu.html" class="nav_link"> Menu</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav_link"> About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav_link"> Contact</a></li>
                 </ul>
+                
+                
             </nav>
-            <div class="burger-menu">
-                <img src="./img/burger-menu.svg" alt="" srcset="">
-                <div class="burger-menu-list">
-                    <ul>
-                        <li><a href="./index.html">home</a></li>
-                        <li><a href="./menu.html">menu</a></li>
-                        <li><a href="./about.html">about</a></li>
-                        <li><a href="./contact.html">contact</a></li>
-                    </ul>
-                </div>
-            </div>
+           
         </header>
     </div>
     <section class="deuxieme">
@@ -54,7 +50,7 @@
                 <img class="center-img-one" src="img/Tout-savoir-sur-le-ramen.jpg" alt="suchi">
                 <img class="center-img-one" src="img/vegetable-tempura-3-1.jpg" alt="suchi">
         </div>
-        <input type="submit" value="À propos de Nous" class="propos">
+        <a href="about.html"><button type="submit" class="propos">À propos de Nous</button></a>
         <div class="lign"></div> 
     </section>
     <section class="troisieme ">
@@ -70,7 +66,7 @@
                 capricieux. Chez japonaise food, vous passez du Japon à la Thaïlande en un coup de
                 baguette. Retrouvez les fameux Khao Pad et Pad Thaï ainsi que d’autres grands classiques
                 du Pays du Sourire tel que les currys ou le poulet sauce aigre doux.</p>
-            <input type="submit" value="DÉCOUVREZ LA CARTE ICI" class="decouvez">
+                <a href="menu.html"><button type="submit" class="decouvez">ÉCOUVREZ LA CARTE ICI</button></a>
         </div>
     </section>
     <section class="quatrieme">
@@ -80,8 +76,8 @@
                 embêtez plus… faites appel au service Zushi Traiteur. Nous sommes à votre écoute pour répondre 
                 à votre demande avec divers choix d’assortiments. Nous vous proposons différents supports de
                 présentation comme bateau, pont ou stand roulotte zushi, directement livrés sur le lieu souhaité.</p>
-        
-                <input type="submit" value="CONTACTEZ  NOUS" class="contact">
+                <a href="contact.html"><button type="submit" class="contact">CONTACTEZ  NOUS</button></a>
+               
         </div>
         <div class="qrt-img">
             <img src="img/zyro-image.png" alt="restaurant">
@@ -156,6 +152,6 @@
 		</div>
     </div>
 	</section>
-    <script src="js.js"></script>
+    <script src="js/js.js"></script>
 </body>
 </html>

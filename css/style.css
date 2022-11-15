@@ -7,75 +7,12 @@
 	list-style: none;
 	scroll-behavior: smooth;
 }
-.burger-menu-list{
-    display: none;
-}
-ul {
-    display: flex;
-    justify-content: space-around;
-}
 
-.burger-menu{
-    display: none;
-    /* width: 100%; */
-    margin-left: auto;
-    padding-right: 1em;
-    display: grid;
-    position: relative;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-.burger-menu{
-    display: none;
-}
-.burger-menu img{
-    justify-self: center;
-    margin-left: 50px;
-
-}
-
-.burger-menu-list{
-    /* border: 1px  solid white; */
-    display: none;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    border-radius: 7px;
-    background-color: #28292D;
-    margin-left: 10% ;
-    padding: 2em;
-    transition: 0.3s ease-in-out;
-    
-}
-.burger-menu-list ul{
-    display: block;    
-}
-
-.burger-menu-list ul li {
-    margin: 1em;
-    transition: 0.3s ease-in-out;
-    
-}
-.burger-menu-list ul li:hover {
-    margin: 1em;
-    background-color: red;
-    border-radius: 3px;
-    padding: 5px;
-    
-}
 @media (max-width: 760px){
     header nav{
         display: none;
     }
 
-    .burger-menu{
-        display: block;
-        justify-self: end;
-        
-    }
-    .burger-menu-list{
-        display: none;
-    }
 }
 header{
     display: flex;
@@ -84,6 +21,7 @@ header{
     padding: 1px 1% ;
     background-color: #000;
 }
+
 .logo{
     height: 100px;
     width: 100px;
@@ -336,7 +274,26 @@ nav{
  ul{
      list-style-type:none;
  }
- 
+ .propos{
+    padding: 2px 2px;
+    margin: 10px;
+    cursor: pointer;
+ }
+ .contact{
+    padding: 2px 2px;
+    margin: 10px;
+    background-color: #000;
+    color: #867F6F;
+    width: 30%;
+    border: 2px;
+    cursor: pointer;
+ }
+ .decouvez{
+    padding: 2px 2px;
+    margin: 10px;
+    width: 50%;
+    cursor: pointer;
+ }
  .footer{
      padding: 20px 2px;
      display: flex;
@@ -416,3 +373,33 @@ nav{
      grid-area: email;
  }
  
+
+ @media (max-width:740px) {
+
+    
+    #contact{
+        background-color: #000;
+        color:#ffff;
+        display: flex;
+        flex-direction: column;
+        
+    }    
+    .footer{
+        padding: 20px 2px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .list{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-bottom: 25px;
+    }
+    .list-div {
+        padding-bottom: 25px;
+    }
+}
+

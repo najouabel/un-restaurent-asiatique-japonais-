@@ -26,21 +26,25 @@
 	</header>
 	<div class="divider">
 	</div>
+	<div class="div-menu">
+		<label for="menu">Menu:</label>
+		<select name="menu" id="menu" onchange="getSelectValue();">
+			<option value="SOUPES">SOUPES</option>
+			<option value="SUSHI & CO">SUSHI & CO</option>
+			<option value="YAKITORIS">YAKITORIS</option>
+			<option value="SALADES">SALADES</option>
+		</select>
+	</div>
 	<div class="div-tout-right-left">
+
 		<div class="div-right">
-			<div class="div-menu">
-				<label for="menu">Menu:</label>
-				<select name="menu" id="menu" onchange="getSelectValue();">
-					<option value="SOUPES">SOUPES</option>
-					<option value="SUSHI & CO">SUSHI & CO</option>
-					<option value="YAKITORIS">YAKITORIS</option>
-					<option value="SALADES">SALADES</option>
-				</select>
-			</div>
+			
 
 
 			<div class="div-choix" id="SOUPES">
 				<h5>SOUPES</h5>
+				<div class="div-choix-soupes" >
+
 				<div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
@@ -52,6 +56,7 @@
 					</div>
 
 				</div>
+				
 				<div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
@@ -72,12 +77,13 @@
 						</div>
 						<button class="plat-btn" type="button" data-name="SOUPES3" data-prix="94" data-id="3">+</button>
 					</div>
-
-				</div>
+                </div>
+			</div>
 			</div>
 
 			<div class="div-choix" id="SUSHI & CO">
 				<h5>SUSHI & CO</h5>
+				<div class="div-choix-SUSHI" >
 				<div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
@@ -112,12 +118,13 @@
 						<button class="plat-btn" type="button" data-name="SUSHI & CO3" data-prix="24"
 							data-id="6">+</button>
 					</div>
-
+				</div>
 				</div>
 			</div>
 
 			<div class="div-choix" id="YAKITORIS">
 				<h5>YAKITORIS</h5>
+				<div class="div-choix-YAKITORIS" >
 				<div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
@@ -152,12 +159,13 @@
 						<button class="plat-btn" type="button" data-name="YAKITORIS3" data-prix="44"
 							data-id="9">+</button>
 					</div>
-
+				</div>
 				</div>
 			</div>
 
 			<div class="div-choix" id="SALADES">
 				<h5>SALADES</h5>
+				<div class="div-choix-SALADES" >
 				<div class="div-card">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
@@ -170,7 +178,7 @@
 					</div>
 
 				</div>
-				<div class="div-card plat-1">
+				<div class="div-card ">
 					<img src="img/salad1.png" alt="soupe">
 					<div class="divcard">
 						<div class="div-card-card">
@@ -192,7 +200,7 @@
 						<button class="plat-btn" type="button" data-name="SALADES3" data-prix="14"
 							data-id="12">+</button>
 					</div>
-
+				</div>
 				</div>
 			</div>
 		</div>
