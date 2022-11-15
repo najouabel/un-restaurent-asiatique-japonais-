@@ -318,6 +318,9 @@ nav{
     width: 50%;
     cursor: pointer;
  }
+ .send{
+    width: 350px;
+}
  .footer{
      padding: 20px 2px;
      display: flex;
@@ -422,6 +425,7 @@ nav{
         flex-wrap: wrap;
         padding-bottom: 25px;
     }
+
     .list-div {
         padding-bottom: 25px;
     }
