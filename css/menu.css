@@ -58,7 +58,13 @@
         -webkit-box-shadow: 2px 5px 29px -9px rgba(0,0,0,0.8);
         -moz-box-shadow: 2px 5px 29px -9px rgba(0,0,0,0.8);
 }
-
+.selectsh{
+    width: 30%;
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: -4px 17px 42px rgb(90, 88, 88);
+}
 .div-left{
         padding-top:10px;
         width: 70%;
