@@ -43,6 +43,7 @@ let cartItems = document.querySelector(".cart-items");
 var platName = document.querySelector(".plat-name");
 var platPrix = document.querySelector(".plat-prix");
 var platBtn = document.querySelectorAll(".plat-btn");
+let valider = document.querySelector(".valider");
 var tmp=1;
 let totaltotal = document.querySelector(".totaltotal");
 var total=0;
@@ -129,7 +130,9 @@ function updateCard(){
       });
     });
 }
-
+valider.addEventListener('click',(e)=>{
+  alert(`prix total :${calculateTotal()}`);
+});
 document.querySelectorAll('.plat-btn').forEach(btn=>{
   btn.addEventListener('click',(e)=>{
 
