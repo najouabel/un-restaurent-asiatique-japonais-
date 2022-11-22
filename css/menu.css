@@ -51,6 +51,8 @@
         padding-top: 20px;
         padding-bottom: 20px;
         margin: auto auto;
+        margin-bottom: 20px;
+        padding-left: 28px;
         display: grid;
         justify-content: center;
         border: none;
