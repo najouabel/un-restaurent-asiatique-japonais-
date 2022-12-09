@@ -66,6 +66,7 @@ function calculateTotal(){
 
   return total;
 }
+
 function increeseQte(id){
   items.forEach(function(item){
     if(item.id==id){
@@ -86,7 +87,17 @@ function decreeseQte(id){
     }
   })
 }
-
+function viderpanier(){
+  items = document.querySelectorAll(".cart-item");
+  for(item of items){
+    item.remove();
+  }
+}
+function vidertotal(){
+  total = document.querySelector(".totaltotal");
+  totaltotal.textContent = '';
+  
+}
 function updateCard(){
  
   totaltotal.textContent = calculateTotal();
@@ -132,6 +143,8 @@ function updateCard(){
 }
 valider.addEventListener('click',(e)=>{
   alert(`prix total :${calculateTotal()}`);
+  viderpanier();
+  vidertotal();
 });
 document.querySelectorAll('.plat-btn').forEach(btn=>{
   btn.addEventListener('click',(e)=>{
