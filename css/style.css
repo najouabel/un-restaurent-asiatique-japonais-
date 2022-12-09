@@ -30,6 +30,7 @@ nav .menu-hamburger{
     }
     .mobile-menu {
         display: flex;
+        position: absolute;
     }
     .nav_links ul{
         display: flex;
