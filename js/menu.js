@@ -141,11 +141,8 @@ function updateCard(){
       });
     });
 }
-valider.addEventListener('click',(e)=>{
-  alert(`prix total :${calculateTotal()}`);
-  viderpanier();
-  vidertotal();
-});
+function update(){
+
 document.querySelectorAll('.plat-btn').forEach(btn=>{
   btn.addEventListener('click',(e)=>{
 
@@ -166,3 +163,13 @@ document.querySelectorAll('.plat-btn').forEach(btn=>{
     updateCard();
   });
 });
+}
+update();
+valider.addEventListener('click',(e)=>{
+  alert(`prix total :${calculateTotal()}`);
+  viderpanier();
+  vidertotal();
+  items = [];
+  update();
+  
+  });
